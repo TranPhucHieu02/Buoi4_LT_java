@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+	<div layout:fragment = "content" class = "container body-container">
+
+		<ul>
+			<li th:each="course:${listcourse}"
+				th:text="${course.getstartDate()} + '  | Tên Khóa: ' + ${course.getLectureName()} + ' | Địa Điểm: ' + ${course.getPlace()}"></li>
+		</ul>
+
+	</div>
+</body>
+</html>
