@@ -9,10 +9,9 @@
 	<div layout:fragment = "content" class = "container body-container">
 
 		<ul>
-			<li th:each="course:${listcourse}"
+			<li th:each="course : ${listcourse}"
 				th:text="${course.getstartDate()} + '  | Tên Khóa: ' + ${course.getLectureName()} + ' | Địa Điểm: ' + ${course.getPlace()}"></li>
 		</ul>
-
 	</div>
 </body>
 </html>
